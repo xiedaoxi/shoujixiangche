@@ -31,16 +31,12 @@
     </script>
 </head>
 <body>
-    <div class="imgmess">
-            <div class="pics">
-            	aa
-                <input type="file" id="my_img"/>
-            </div>
-     </div>
+    <input type="file" id="my_img"/>
+     <img src="" alt="" />
  <script src="js/jquery.min.js"></script>  
     <script src="js/localResizeIMG.js"></script>
     <script src="js/mobileBUGFix.mini.js"></script>
-    <script src="js/ResizeIMG.js"></script>
+    <script src="js/ResizeI MG.js"></script>
     <script>
         $(function () {
             //上传图片!!!!!!!!!!!!!!!!!!!!
@@ -49,10 +45,7 @@
                 quality: 1.0,
                 success: function (result) {
                     console.log(result);
-                    var img = new Image();
-                    img.src = result.base64;
-                    console.log(result.base64);
-                    $(".pics").before(img);
+                    $('img').attr('src',result.base64)
                 }
             });
             var rem_width=parseInt($("body").css("width"))/7.5;
