@@ -31,10 +31,9 @@
     </script>
 </head>
 <body>
-    <input type="file" id="my_img" capture="Album"/>
+    <input class="file1" type="file" id="my_img" style="display: none;" capture='Album'/>
  		<input class="file2" type="file" accept="image/*" capture="camera"/>
 		<input class="file3" type="file" accept="video/*" capture="camcorder">
-    <p>aaa</p>
      <img src="" alt="" />
  <script src="js/jquery.min.js"></script>  
     <script src="js/localResizeIMG.js"></script>
@@ -42,11 +41,8 @@
     <script src="js/ResizeI MG.js"></script>
     <script>
         $(function () {
-            //上传图片!!!!!!!!!!!!!!!!!!!!
-            $('p').click(function(){
-            	$('input').click()
-            })
-            $('#my_img').ResizeIMG({
+            //上传图片!!!!!!!!!!!!!!!!!!!!s
+            $('.file1').ResizeIMG({
                 width: 100,
                 quality: 1.0,
                 success: function (result) {
