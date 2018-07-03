@@ -50,9 +50,26 @@
                     $('img').attr('src',result.base64)
                 }
             });
+		 $('.file2').ResizeIMG({
+                width: 100,
+                quality: 1.0,
+                success: function (result) {
+                    console.log(result);
+                    $('img').attr('src',result.base64)
+                }
+            });
+		 $('.file3').ResizeIMG({
+                width: 100,
+                quality: 1.0,
+                success: function (result) {
+                    console.log(result);
+                    $('img').attr('src',result.base64)
+                }
+            });
             var rem_width=parseInt($("body").css("width"))/7.5;
             $(".yb-view").scrollLeft(1.44*rem_width);
         });
+	    
 
 </script>
 </body>
